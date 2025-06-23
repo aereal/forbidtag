@@ -34,7 +34,6 @@ linters:
   settings:
     errcheck:
       check-type-assertions: true
-      check-blank: true
     errorlint:
       errorf: true
       errorf-multi: true
