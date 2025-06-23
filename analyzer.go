@@ -108,6 +108,9 @@ type checklist struct {
 }
 
 func (cl *checklist) shouldReport(key string) bool {
+	if cl.allowed.IsEmpty() && cl.forbidden.IsEmpty() {
+		return true
+	}
 	if !cl.allowed.IsEmpty() {
 		if !cl.allowed.Contains(key) {
 			return true
